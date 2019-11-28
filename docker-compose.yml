@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  node:
+    build: ./
+    container_name: "study-anonymous-thanks-botkit"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/root/bot
+    working_dir: /root/bot/src
+    command: npm start
